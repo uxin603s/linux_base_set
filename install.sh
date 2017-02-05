@@ -27,6 +27,19 @@ yum -y install wget vim
 git config --global user.name "uxin603s"
 git config --global user.email "uxin603s@gmail.com"
 
+wget https://files.phpmyadmin.net/phpMyAdmin/4.6.6/phpMyAdmin-4.6.6-all-languages.tar.xz -O ${BASE_PATH}/public_html/phpMyAdmin-4.6.6-all-languages.tar.xz
+tar -Jxf ${BASE_PATH}/public_html/phpMyAdmin-4.6.6-all-languages.tar.xz -C ${BASE_PATH}/public_html
+
+/bin/mv ${BASE_PATH}/public_html/phpMyAdmin-4.6.6-all-languages ${BASE_PATH}/public_html/phpMyAdmin
+echo "ini_set('session.save_path', '/tmp/');" > ${BASE_PATH}/public_html/phpMyAdmin/config.inc.php
+echo "ini_set('session.save_handler', 'files');" >> ${BASE_PATH}/public_html/phpMyAdmin/config.inc.php
+echo 'cat ${BASE_PATH}/public_html/phpMyAdmin/config.sample.inc.php' >> ${BASE_PATH}/public_html/phpMyAdmin/config.inc.php
+echo <<EOF >> ${BASE_PATH}/public_html/phpMyAdmin/config.inc.php
+//google reCaptcha
+//$cfg['CaptchaLoginPublicKey']='';
+//$cfg['CaptchaLoginPrivateKey']='';
+EOF
+
 git clone git@github.com:uxin603s/linux_iptables.git ${BASE_PATH}/linux_iptables
 sh ${BASE_PATH}/linux_iptables/iptables.rule 1
 	

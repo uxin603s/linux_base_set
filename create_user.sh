@@ -20,13 +20,18 @@ done
 
 mysql_passwd=`cat ~/passwd.txt`
 
+
 useradd $account
 if [ $? == 0 ]; then
 	echo $passwd | passwd $account --stdin
 	/bin/cp -rf conf /home/$account/conf
 	chown -R $account:$account /home/$account/conf
-	mkdir /home/$account/public_html
+	
+	/bin/cp -rf public_html /home/$account/public_html	
+	
 	chown -R $account:$account /home/$account/public_html
+	
+	
 	sed -i "s/REPLACE_USER/${account}/g" /home/$account/conf/php-fpm/php-fpm.conf
 	sed -i "s/REPLACE_USER/${account}/g" /home/$account/conf/nginx/php-fpm.conf
 	sed -i "s/REPLACE_USER/${account}/g" /home/$account/conf/nginx/nginx.conf
