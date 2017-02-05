@@ -1,5 +1,8 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin; export PATH
 BASE_PATH=`readlink -e $(dirname $0)`
+
+echo `openssl rand -base64 32` > ~/passwd.txt
+
 #把一般使用者umask改成0022
 sed -i 's/umask 002/umask 022/g' /etc/profile
 
@@ -42,9 +45,11 @@ sh ${BASE_PATH}/php_install/install.sh
 git clone git@github.com:uxin603s/nginx_install.git ${BASE_PATH}/nginx_install
 sh ${BASE_PATH}/nginx_install/install.sh
 
-service memcached start
+
+
+service php-fpm start
 service nginx start
-service mysql start
+
 
 # service php-fpm start
 
