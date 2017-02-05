@@ -4,7 +4,7 @@ BASE_PATH=`readlink -e $(dirname $0)`
 # if [ 0 == 1 ];then
 	sh ${BASE_PATH}/disable_ipv6.sh
 	yum -y groupinstall 'Development Tools'
-	yum -y install wget
+	yum -y install wget vim
 	git config --global user.name "uxin603s"
 	git config --global user.email "uxin603s@gmail.com"
 	
