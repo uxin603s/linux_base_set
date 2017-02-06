@@ -37,7 +37,7 @@ if [ $? == 0 ]; then
 	read -p "請輸入網域:" server_name
 	sed -i "s/SERVER_NAME_REPLACE/${server_name}/g" /home/$account/conf/nginx/nginx.conf
 	ln -s /home/$account/conf/php-fpm/php-fpm.conf /etc/php-fpm.d/$account.conf
-	ln -s /home/$account/conf/nginx/nginx.conf /usr/local/nginx/conf/$account.conf
+	ln -s /home/$account/conf/nginx/nginx.conf /usr/local/nginx/conf/include/$account.conf
 	
 	mysql -uroot -p$mysql_passwd -e "CREATE DATABASE $account;"
 	mysql -uroot -p$mysql_passwd -e "CREATE USER '$account'@'localhost' IDENTIFIED BY '$passwd';"
