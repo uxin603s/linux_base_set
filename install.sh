@@ -19,6 +19,8 @@ sed -i 's/UMASK           077/UMASK           022/g' /etc/login.defs
 
 #防止su切換root帳號
 sed  's/\#auth           required/#auth           required/g' /etc/pam.d/su
+setenforce 0
+sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/sysconfig/selinux
 
 ulimit -n 5000
 
