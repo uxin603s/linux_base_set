@@ -47,7 +47,7 @@ git clone git@github.com:uxin603s/git_install.git
 sh ${BASE_PATH}/git_install/install.sh
 
 git clone git@github.com:uxin603s/fail2ban_install.git
-sh ${BASE_PATH}/fail2ban_install/install.rule
+sh ${BASE_PATH}/fail2ban_install/install.sh
 	
 git clone git@github.com:uxin603s/memcached_install.git ${BASE_PATH}/memcached_install
 sh ${BASE_PATH}/memcached_install/install.sh
