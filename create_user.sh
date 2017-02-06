@@ -30,6 +30,9 @@ if [ $? == 0 ]; then
 	/bin/cp -rf public_html /home/$account/public_html	
 	chown -R $account:$account /home/$account/public_html
 	
+	/bin/cp -rf phpMyAdmin /home/$account/phpMyAdmin	
+	chown -R $account:$account /home/$account/phpMyAdmin
+	
 	
 	sed -i "s/REPLACE_USER/${account}/g" /home/$account/conf/php-fpm/php-fpm.conf
 	sed -i "s/REPLACE_USER/${account}/g" /home/$account/conf/nginx/php-fpm.conf

@@ -1,5 +1,7 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin; export PATH
 BASE_PATH=`readlink -e $(dirname $0)`
+yum install -y pcre-devel
+
 cd ${BASE_PATH}
 
 wget https://www.openssl.org/source/openssl-1.0.2k.tar.gz -O openssl-1.0.2k.tar.gz
