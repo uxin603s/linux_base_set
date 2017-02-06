@@ -28,7 +28,7 @@ if [ $? == 0 ]; then
 	chown -R $account:$account /home/$account/conf
 	
 	/bin/cp -rf public_html /home/$account/public_html	
-	
+	account=cfdchi
 	chown -R $account:$account /home/$account/public_html
 	
 	
