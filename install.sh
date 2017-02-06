@@ -70,7 +70,7 @@ sh ${BASE_PATH}/nginx_install/install.sh
 
 
 
-service php-fpm start
+
 service nginx start
 
 
