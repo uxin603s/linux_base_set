@@ -30,6 +30,12 @@ git config --global user.email "uxin603s@gmail.com"
 git clone git@github.com:uxin603s/linux_iptables.git ${BASE_PATH}/linux_iptables
 sh ${BASE_PATH}/linux_iptables/iptables.rule 1
 	
+git clone git@github.com:uxin603s/git_install.git
+sh ${BASE_PATH}/git_install/install.sh
+
+git clone git@github.com:uxin603s/fail2ban_install.git
+sh ${BASE_PATH}/fail2ban_install/install.rule
+	
 git clone git@github.com:uxin603s/memcached_install.git ${BASE_PATH}/memcached_install
 sh ${BASE_PATH}/memcached_install/install.sh
 
