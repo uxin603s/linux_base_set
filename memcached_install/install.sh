@@ -19,7 +19,7 @@ if [ ! -e $BASE_PATH/memcached-1.4.34.tar.gz ]; then
 fi
 
 cd $BASE_PATH/memcached-1.4.34
-sed -i "s/\#define MAX_NUMBER_OF_SLAB_CLASSES (63 + 1)/\#define MAX_NUMBER_OF_SLAB_CLASSES (200 + 1)/g" memcached.h
+# sed -i "s/\#define MAX_NUMBER_OF_SLAB_CLASSES (63 + 1)/\#define MAX_NUMBER_OF_SLAB_CLASSES (200 + 1)/g" memcached.h
 ./configure
 make 
 make install
