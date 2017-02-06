@@ -1,9 +1,0 @@
-linux_iptables
-
-fail2ban_install
-git_install
-memcached_install
-imagick_install
-mysql_install
-php_install
-nginx_install

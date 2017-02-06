@@ -1,0 +1,2 @@
+#/sbin/iptables -A INPUT -i $EXTIF -s 114.41.52.139 -j DROP
+#/sbin/iptables -A INPUT -i $EXTIF -s 192.168.1.125 -j DROP
