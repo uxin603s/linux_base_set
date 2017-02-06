@@ -18,7 +18,7 @@ source /etc/profile
 sed -i 's/UMASK           077/UMASK           022/g' /etc/login.defs
 
 #防止su切換root帳號
-sed -i 's/\#auth           required        pam_wheel.so use_uid/auth           required        pam_wheel.so use_uid/g' /etc/pam.d/su
+sed  's/\#auth           required/#auth           required/g' /etc/pam.d/su
 
 ulimit -n 5000
 
