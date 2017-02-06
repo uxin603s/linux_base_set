@@ -12,6 +12,7 @@ echo "shopt -s checkwinsize " >> /etc/profile
 #預設編輯器
 echo "export VISUAL=vim" >> /etc/profile
 echo "export EDITOR=vim" >> /etc/profile
+source /etc/profile
 
 #創建帳號資料夾 把umask 077 改成 022
 sed -i 's/UMASK           077/UMASK           022/g' /etc/login.defs
@@ -39,9 +40,6 @@ cat <<\EOF >> ${BASE_PATH}/public_html/phpMyAdmin/config.inc.php
 //$cfg['CaptchaLoginPublicKey']='';
 //$cfg['CaptchaLoginPrivateKey']='';
 EOF
-
-echo "ini_set('session.save_path', '/tmp/');" >> ${BASE_PATH}/public_html/phpMyAdmin/config.inc.php
-echo "ini_set('session.save_handler', 'files');" >> ${BASE_PATH}/public_html/phpMyAdmin/config.inc.php
 
 
 git clone git@github.com:uxin603s/linux_iptables.git ${BASE_PATH}/linux_iptables
