@@ -59,9 +59,9 @@ iptables -A INPUT -p TCP -i $EXTIF --dport  22 --sport 1024:65534 -j ACCEPT # SS
 # iptables -A INPUT -p TCP -i $EXTIF --dport  53 --sport 1024:65534 -j ACCEPT # DNS
 iptables -A INPUT -p TCP -i $EXTIF --dport  80 --sport 1024:65534 -j ACCEPT # WWW
 #iptables -A INPUT -p TCP -i $EXTIF --dport  8080 --sport 1024:65534 -j ACCEPT # WWW
-#iptables -A INPUT -p TCP -i $EXTIF --dport 110 --sport 1024:65534 -j ACCEPT # POP3
+iptables -A INPUT -p TCP -i $EXTIF --dport 110 --sport 1024:65534 -j ACCEPT # POP3
 # iptables -A INPUT -p TCP -i $EXTIF --dport 143 --sport 1024:65534 -j ACCEPT # POP3
-# iptables -A INPUT -p TCP -i $EXTIF --dport 443 --sport 1024:65534 -j ACCEPT # HTTPS
+iptables -A INPUT -p TCP -i $EXTIF --dport 443 --sport 1024:65534 -j ACCEPT # HTTPS
 # iptables -A INPUT -p TCP -i $EXTIF --dport 3306 --sport 1024:65534 -j ACCEPT # mysql
 
 # 第二部份，針對後端主機的防火牆設定！###############################
