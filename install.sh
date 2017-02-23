@@ -3,6 +3,8 @@ BASE_PATH=`readlink -e $(dirname $0)`
 
 echo `openssl rand -base64 32` > ~/passwd.txt
 
+chmod 600 ~/passwd.txt
+
 #把一般使用者umask改成0022
 sed -i 's/umask 002/umask 022/g' /etc/profile
 
