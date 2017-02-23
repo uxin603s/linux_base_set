@@ -33,13 +33,13 @@ git config --global user.name "uxin603s"
 git config --global user.email "uxin603s@gmail.com"
 
 
-wget https://files.phpmyadmin.net/phpMyAdmin/4.6.6/phpMyAdmin-4.6.6-all-languages.tar.xz -O ${BASE_PATH}/public_html/phpMyAdmin-4.6.6-all-languages.tar.xz
-tar -Jxf ${BASE_PATH}/public_html/phpMyAdmin-4.6.6-all-languages.tar.xz -C ${BASE_PATH}
-rm -rf ${BASE_PATH}/public_html/phpMyAdmin-4.6.6-all-languages.tar.xz
-/bin/mv ${BASE_PATH}/phpMyAdmin-4.6.6-all-languages ${BASE_PATH}/phpMyAdmin
-cat ${BASE_PATH}/phpMyAdmin/config.sample.inc.php > ${BASE_PATH}/phpMyAdmin/config.inc.php
+wget https://files.phpmyadmin.net/phpMyAdmin/4.6.6/phpMyAdmin-4.6.6-all-languages.tar.xz -O ~/phpMyAdmin-4.6.6-all-languages.tar.xz
+tar -Jxf ~/phpMyAdmin-4.6.6-all-languages.tar.xz -C ~/
+rm -rf ~/phpMyAdmin-4.6.6-all-languages.tar.xz
+/bin/mv ~/phpMyAdmin-4.6.6-all-languages ~/phpMyAdmin
+cat ~/phpMyAdmin/config.sample.inc.php > ~/phpMyAdmin/config.inc.php
 
-cat <<\EOF >> ${BASE_PATH}/phpMyAdmin/config.inc.php
+cat <<\EOF >> ~/phpMyAdmin/config.inc.php
 //google reCaptcha
 //$cfg['CaptchaLoginPublicKey']='';
 //$cfg['CaptchaLoginPrivateKey']='';
